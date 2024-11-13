@@ -1,0 +1,73 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: ./backend
+    image: backend:latest
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/essay
+      - REDIS_HOST=redis 
+      - REDIS_PORT=6379
+    networks:
+      - custom-network
+    deploy:
+      replicas: 3
+
+  frontend:
+    build:
+      context: ./frontend
+    image: frontend:latest
+    ports:
+      - "8080:8080"
+    environment:
+      - BACKEND_URL=http://nginx
+    networks:
+      - custom-network
+
+  mongo:
+    image: mongo
+    volumes:
+      - mongo_data:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - custom-network
+
+  db-init:
+    build:
+      context: ./backend
+    image: data
+    command: ["node", "init-mongo.js"]
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/essay
+    depends_on:
+      - mongo
+    networks:
+      - custom-network
+    restart: "no"
+
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    networks:
+      - custom-network
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - custom-network
+
+networks:
+  custom-network:
+    driver: overlay
+
+volumes:
+  mongo_data:

@@ -1,0 +1,93 @@
+<div class="d-flex gap-5 align-items-center p-5">
+        <div class="rightSession border rounded p-4 shadow" style="width: 450px;">
+            <form method="post" class="p-2 d-flex flex-column justify-content-around gap-2" novalidate>
+                <h1 class="text-dark">Sign up</h1>
+                <div class="mb-3">
+                    <label for="exampleInputName" class="form-label">Full name</label>
+                    <input type="email" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Jon Snow" name="name" required="off">
+                </div>
+                <div class="mb-3 ">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="your@email.com" name="email" required="off">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="******" name="password">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">I want to receive updates via email.</label>
+                </div>
+
+                <div class="alert alert-danger" style="display: none;">
+                    Vui lòng nhập đầy đủ thông tin
+                </div>
+
+                {{#if err}}
+                    <div class="alert alert-danger">
+                        {{err}}
+                    </div>
+                {{/if}}
+
+                <button type="submit" class="btn btn-dark w-100">Sign up</button>
+                <p class="text-center mt-2 mb-0">Already have an account? <a class="text-dark fw-bold" href="login">Sign in</a></p>
+            </form>
+        </div>
+</div>
+
+<script>
+    const form = document.getElementsByTagName('form')[0];
+    const alert = document.getElementsByClassName('alert')[0];
+
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('exampleInputName');
+        const email = document.getElementById('exampleInputEmail1');
+        const password = document.getElementById('exampleInputPassword1');
+
+        if (name.value === "" || email.value === "" || password.value === "") {
+            alert.style.display = 'block';
+            alert.textContent = 'Please fill out all the fields';
+        } else if (!email.value.includes("@gmail.com")) {
+            alert.textContent = "Email must contain @gmail.com";
+            alert.style.display = 'block';
+        } else if (password.value.length < 6) {
+            alert.textContent = "Password must be at least 6 characters long";
+            alert.style.display = 'block';
+        } else {
+            const data = {
+                name: name.value,
+                email: email.value,
+                password: password.value
+            };
+
+            submitFormData(data);
+        }
+    });
+
+    async function submitFormData(data) {
+        try {
+            const response = await fetch('http://localhost:3000/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+                credentials: 'include'
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+                localStorage.setItem('toastMsg', result.msg);
+                window.location.href = 'http://localhost:8080/';
+            } else {
+                const errorMessage = await response.json();
+                alert.textContent = errorMessage.msg || 'Something went wrong';
+                alert.style.display = 'block';
+            }
+        } catch (error) {
+            console.error("Fetch error: ", error);
+            alert.textContent = 'An error occurred. Please try again.';
+            alert.style.display = 'block';
+        }
+    }
+</script>

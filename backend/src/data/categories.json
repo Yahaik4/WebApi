@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "670e0d02c94cb9300629739e"
+  },
+  "name": "Football"
+},
+{
+  "_id": {
+    "$oid": "670fc4ca6ae600fe875e3327"
+  },
+  "name": "GOLF",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67161758cb520892be75a284"
+  },
+  "name": "Running",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6716176acb520892be75a288"
+  },
+  "name": "Basketball",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67161784cb520892be75a28c"
+  },
+  "name": "Tennis",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67161791cb520892be75a290"
+  },
+  "name": "Gym and Training",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "671617a9cb520892be75a294"
+  },
+  "name": "Yoga",
+  "__v": 0
+}]

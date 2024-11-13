@@ -1,0 +1,382 @@
+[{
+  "_id": {
+    "$oid": "671618d1cb520892be75a29a"
+  },
+  "name": "Nike Pegasus 41 GORE-TEX",
+  "stock": 500,
+  "gender": "woman",
+  "size": [
+    "EU 40",
+    "EU 40.5",
+    "EU 41",
+    "EU 42",
+    "EU 42.5"
+  ],
+  "colour": [
+    "Summit White",
+    "Photon Dust",
+    "Off-White",
+    "White"
+  ],
+  "price": "4699000",
+  "category": "Running",
+  "des": "Responsive cushioning in the winterized Pegasus provides an energised ride for wet-weather road running. Experience lighter-weight energy return with dual Air Zoom units and a ReactX foam midsole. Plus, a waterproof GORE-TEX upper and reflective design details throughout help you comfortably take on the elements.",
+  "image": "http://localhost:3000/img/products/Nike Pegasus 41 GORE-TEX.png",
+  "createdAt": {
+    "$date": "2024-10-21T09:03:13.043Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-02T05:51:04.678Z"
+  },
+  "slug": "nike-pegasus-41-gore-tex",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67161964cb520892be75a2a1"
+  },
+  "name": "Nike Pegasus EasyOn Blueprint",
+  "stock": 1000,
+  "gender": "man",
+  "size": [
+    "EU 40",
+    "EU 40.5",
+    "EU 41",
+    "EU 42",
+    "EU 42.5"
+  ],
+  "colour": [
+    "Multi-Colour",
+    "Multi-Colour"
+  ],
+  "price": "3829000",
+  "category": "Running",
+  "des": "Responsive cushioning in the Pegasus provides an energised ride for everyday road running. Experience lighter-weight energy return with dual Air Zoom units and a ReactX foam midsole. Plus, improved engineered mesh on the upper decreases weight and increases breathability.\r\n\r\n",
+  "image": "http://localhost:3000/img/products/Nike Pegasus EasyOn Blueprint.png",
+  "createdAt": {
+    "$date": "2024-10-21T09:05:40.410Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-21T09:05:40.410Z"
+  },
+  "slug": "nike-pegasus-easyon-blueprint",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67161a11cb520892be75a2a8"
+  },
+  "name": "Nike Air Max Dn Premium",
+  "stock": 1000,
+  "gender": "man",
+  "size": [
+    "EU 35.5",
+    "EU 36",
+    "EU 36.5",
+    "EU 37.5",
+    "EU 38"
+  ],
+  "colour": [
+    "Metallic Silver",
+    "White",
+    "Black",
+    "Metallic Silver"
+  ],
+  "price": "4999000",
+  "category": "Basketball",
+  "des": "Say hello to the next generation of Air technology. The Air Max Dn features our Dynamic Air unit system of dual-pressure tubes, creating a reactive sensation with every step. This results in a futuristic design that's comfortable enough to wear from day to night. Plus, this premium edition features a metallic monochromatic finish. Go ahead—Feel The Unreal.\r\n\r\n",
+  "image": "http://localhost:3000/img/products/Nike Air Max Dn Premium.png",
+  "createdAt": {
+    "$date": "2024-10-21T09:08:33.939Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-21T09:08:33.939Z"
+  },
+  "slug": "nike-air-max-dn-premium",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67161aa0cb520892be75a2ad"
+  },
+  "name": "Nike Air Max Dn",
+  "stock": 1000,
+  "gender": "unisex",
+  "size": [
+    "EU 36",
+    "EU 36.5",
+    "EU 37.5",
+    "EU 38",
+    "EU 38.5"
+  ],
+  "colour": [
+    "White",
+    "White",
+    "Metallic Silver",
+    "White"
+  ],
+  "price": "4409000",
+  "category": "Basketball",
+  "des": "Say hello to the next generation of Air technology. The Air Max Dn features our Dynamic Air unit system of dual-pressure tubes, creating a reactive sensation with every step. This results in a futuristic design that's comfortable enough to wear from day to night. Go ahead—Feel the Unreal.",
+  "image": "http://localhost:3000/img/products/Nike Air Max Dn.png",
+  "createdAt": {
+    "$date": "2024-10-21T09:10:56.490Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-21T09:10:56.490Z"
+  },
+  "slug": "nike-air-max-dn",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67161b86cb520892be75a2bd"
+  },
+  "name": "Nike Mercurial Superfly 10 Elite 'Kylian Mbappé'",
+  "stock": 1000,
+  "gender": "man",
+  "size": [
+    "EU 40",
+    "EU 40.5",
+    "EU 41",
+    "EU 42",
+    "EU 42.5"
+  ],
+  "colour": [
+    "Light Laser Orange",
+    "Armoury Navy"
+  ],
+  "price": "8349000",
+  "category": "Football",
+  "des": "Obsessed with speed? So is Kylian Mbappé. That's why we made this Elite boot with an improved 3/4-length Air Zoom unit. It gives you, and Kylian, the propulsive feel needed to break through the back line. The result is the most responsive Mercurial we've ever made, because you demand greatness from yourself and your footwear.",
+  "image": "http://localhost:3000/img/products/Nike Mercurial Superfly 10 Elite 'Kylian Mbappé'.png",
+  "createdAt": {
+    "$date": "2024-10-21T09:14:46.338Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-21T09:14:46.338Z"
+  },
+  "slug": "nike-mercurial-superfly-10-elite-kylian-mbapp",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67161bf7cb520892be75a2c2"
+  },
+  "name": "Nike Mercurial Vapor 16 Elite",
+  "stock": 1000,
+  "gender": "man",
+  "size": [
+    "EU 40",
+    "EU 40.5",
+    "EU 41",
+    "EU 42",
+    "EU 42.5"
+  ],
+  "colour": [
+    "Volt",
+    "Black"
+  ],
+  "price": "7319000",
+  "category": "Football",
+  "des": "Obsessed with speed? So are the game's biggest stars. That's why we made this Elite boot with an improved 3/4-length Air Zoom unit. It gives you and the sport's fastest players the propulsive feel needed to break through the back line. The result is the most responsive Mercurial we've ever made, because you demand greatness from yourself and your footwear.",
+  "image": "http://localhost:3000/img/products/Nike Mercurial Vapor 16 Elite.png",
+  "createdAt": {
+    "$date": "2024-10-21T09:16:39.294Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-21T09:16:39.294Z"
+  },
+  "slug": "nike-mercurial-vapor-16-elite",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67161c9ccb520892be75a2d1"
+  },
+  "name": "Nike Air Max 1 '86 OG G",
+  "stock": 1000,
+  "gender": "unisex",
+  "size": [
+    "EU 40",
+    "EU 40.5",
+    "EU 41",
+    "EU 42",
+    "EU 42.5"
+  ],
+  "colour": [
+    "White",
+    "Gum Medium Brown",
+    "Black"
+  ],
+  "price": "4699000",
+  "category": "GOLF",
+  "des": "A streetwear legend hits the links in the Air Max 1 '86 OG G. Featuring the 4-window design that lets you peek at the Max Air unit underneath, this is on-course cool, confidence and comfort personified. It sports the vintage Air Max 1 details you love, like clean lines and unmistakable colours, and melds them with our game-changing golf technology, so you can play all day, all year round in a timeless fit.",
+  "image": "http://localhost:3000/img/products/Nike Air Max 1 '86 OG G.png",
+  "createdAt": {
+    "$date": "2024-10-21T09:19:24.029Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-21T09:19:24.029Z"
+  },
+  "slug": "nike-air-max-1-86-og-g",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67161d04cb520892be75a2d6"
+  },
+  "name": "Nike Infinity Tour BOA 2",
+  "stock": 500,
+  "gender": "unisex",
+  "size": [
+    "EU 40",
+    "EU 40.5",
+    "EU 41",
+    "EU 42",
+    "EU 42.5"
+  ],
+  "colour": [
+    "White",
+    "Vapour Green",
+    "Pure Platinum",
+    "Black"
+  ],
+  "price": "5869000",
+  "category": "GOLF",
+  "des": "The Infinity Tour 2 ups the ante from the previous iteration with more spikes, updated foam and a flattened Air Zoom unit. It's all in the name of swaggering strolls towards the pin as you point to where your ball just landed. With plenty of bounce and comfort, it's game for wherever your next round takes you. This version's fit system is micro-adjustable for a fast, custom fit.",
+  "image": "http://localhost:3000/img/products/Nike Infinity Tour BOA 2.png",
+  "createdAt": {
+    "$date": "2024-10-21T09:21:08.760Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-21T09:21:08.760Z"
+  },
+  "slug": "nike-infinity-tour-boa-2",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67161d7ccb520892be75a2e1"
+  },
+  "name": "Nike GP Challenge Pro",
+  "stock": 500,
+  "gender": "unisex",
+  "size": [
+    "EU 40",
+    "EU 40.5",
+    "EU 41",
+    "EU 42",
+    "EU 42.5"
+  ],
+  "colour": [
+    "White/Vapour Green/Pure Platinum/Black"
+  ],
+  "price": "2105349",
+  "category": "Tennis",
+  "des": "Game. Steady. Match. Come out on the winning side in the all-new GP Challenge Pro. Designed for baseline back-and-forth bolts and dashes to the net, it has the speed and stability needed to help your game go the distance.",
+  "image": "http://localhost:3000/img/products/Nike GP Challenge Pro.png",
+  "createdAt": {
+    "$date": "2024-10-21T09:23:08.840Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-21T09:23:08.840Z"
+  },
+  "slug": "nike-gp-challenge-pro",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67161e0ccb520892be75a2e6"
+  },
+  "name": "NikeCourt Zoom Vapor Cage 4 Rafa",
+  "stock": 1000,
+  "gender": "unisex",
+  "size": [
+    "EU 40",
+    "EU 40.5",
+    "EU 41"
+  ],
+  "colour": [
+    "White",
+    "Volt",
+    "Geode Teal"
+  ],
+  "price": "4409000",
+  "category": "Tennis",
+  "des": "Innovated to withstand your toughest matches, this updated design puts flexible, durable materials exactly where they're needed most. Signature Rafael Nadal details let you rep your favourite player while you run the court.\r\n\r\n",
+  "image": "http://localhost:3000/img/products/NikeCourt Zoom Vapor Cage 4 Rafa.png",
+  "createdAt": {
+    "$date": "2024-10-21T09:25:32.295Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-21T09:25:32.295Z"
+  },
+  "slug": "nikecourt-zoom-vapor-cage-4-rafa",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67161e8fcb520892be75a2f1"
+  },
+  "name": "Nike Reax 8 TR",
+  "stock": 1000,
+  "gender": "man",
+  "size": [
+    "EU 40",
+    "EU 40.5",
+    "EU 41",
+    "EU 42"
+  ],
+  "colour": [
+    "Black",
+    "Black",
+    "Metallic Gold"
+  ],
+  "price": "2499000",
+  "category": "Gym and Training",
+  "des": "The Nike Reax 8 TR combines lightweight containment with responsive cushioning for premium performance while training.",
+  "image": "http://localhost:3000/img/products/Nike Reax 8 TRNike Reax 8 TR.jpg",
+  "createdAt": {
+    "$date": "2024-10-21T09:27:43.110Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-21T09:27:43.110Z"
+  },
+  "slug": "nike-reax-8-tr",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67161f29cb520892be75a2f6"
+  },
+  "name": "Nike Zoom Bella 6",
+  "stock": 500,
+  "gender": "woman",
+  "size": [
+    "EU 36",
+    "EU 36.5",
+    "EU 37.5",
+    "EU 38",
+    "EU 38.5",
+    "EU 39"
+  ],
+  "colour": [
+    "Guava Ice",
+    "Pale Ivory",
+    "Red Stardust",
+    "Metallic Red Bronze"
+  ],
+  "price": "1999199",
+  "category": "Gym and Training",
+  "des": "Unleash your innermost strength and spirit in the Nike Zoom Bella 6. This design supports heavy lifts, explosive movements and primal post-set struts as you flaunt your hard-earned progress on the gym floor. Newly implemented Zoom Air cushioning gives you pop, and an updated forefoot ensures all sorts of foot shapes can flex through their workouts in true style.\r\n\r\n",
+  "image": "http://localhost:3000/img/products/Nike Zoom Bella 6.png",
+  "createdAt": {
+    "$date": "2024-10-21T09:30:17.359Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-21T09:30:17.359Z"
+  },
+  "slug": "nike-zoom-bella-6",
+  "__v": 0
+}]

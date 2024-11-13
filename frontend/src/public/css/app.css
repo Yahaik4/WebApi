@@ -1,0 +1,8 @@
+@import 'bootstrap.min.css';
+@import 'fontawesome.min.css';
+@import 'templatemo-style.css';
+
+
+select {
+  width: 120px;
+  margin: 0 16px; }

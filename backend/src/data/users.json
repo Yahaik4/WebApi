@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "6716415ea1781b553329a086"
+  },
+  "name": "Admin",
+  "email": "Admin@gmail.com",
+  "password": "$2b$10$db9l76w5Qy.qLcFOfLRbTe4pIGj7wY7f5xA08KrJa2dywSmBsJlSy",
+  "createdAt": {
+    "$date": "2024-10-21T11:56:14.361Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-21T11:56:14.361Z"
+  },
+  "__v": 0
+}]

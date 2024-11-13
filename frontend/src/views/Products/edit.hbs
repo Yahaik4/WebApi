@@ -1,0 +1,161 @@
+<div class="container tm-mt-big tm-mb-big">
+    <div class="row">
+        <div class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto">
+            <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="tm-block-title d-inline-block">Edit Product</h2>
+                    </div>
+                </div>
+                <form method="post" action="/product/edit/{{product._id}}?_method=PUT" enctype="multipart/form-data" class="tm-edit-product-form" novalidate>
+                    <div class="row tm-edit-product-row">
+                        <div class="col-xl-6 col-lg-6 col-md-12">
+                            <div class="form-group mb-3">
+                                <label for="name">Product Name</label>
+                                <input id="name" name="name" type="text" class="form-control validate" value="{{product.name}}" required />
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="price">Price</label>
+                                <input id="price" name="price" type="number" class="form-control validate" value="{{product.price}}" placeholder="Enter Price" required />
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="size">Size</label>
+                                <input id="size" name="size" type="text" class="form-control validate" value="{{product.size}}" placeholder="Enter sizes (e.g., 38, 39, 40)" required />
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="colour">Colour</label>
+                                <input id="colour" name="colour" type="text" class="form-control validate" value="{{product.colour}}" placeholder="Enter colour (e.g., White, Dark, Red)" required />
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="description">Description</label>
+                                <textarea id="description" name="des" class="form-control validate" rows="3" required>{{product.des}}</textarea>
+                            </div>
+                            <div class="row">
+                                <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                    <label for="gender">Gender</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="genderMan" name="gender" value="man" required
+                                        {{#if (eq product.gender "man")}}checked{{/if}}
+                                        >
+                                        <label class="form-check-label" for="genderMan">Man</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="genderWoman" name="gender" value="woman" required
+                                        {{#if (eq product.gender "woman")}}checked{{/if}}>
+                                        <label class="form-check-label" for="genderWoman">Woman</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="genderUnisex" name="gender" value="unisex" required
+                                        {{#if (eq product.gender "unisex")}}checked{{/if}}>
+                                        <label class="form-check-label" for="genderUnisex">Unisex</label>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                    <label for="stock">IN STOCK</label>
+                                    <input id="stock" name="stock" type="text" class="form-control validate" value="{{product.stock}}" required />
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
+                            <img 
+                                id="productImagePreview" 
+                                src="{{product.image}}" 
+                                alt="Product Image" 
+                                class="img-fluid" 
+                                style="max-width: 100%; height: auto; display: block; margin-bottom: 10px;" 
+                            />
+
+                            <div id="preview"></div>
+                            <div class="form-group">    
+                                <div class="custom-file mt-3 mb-3">
+                                    <input id="fileInput" name="image" type="file" style="display:none;" value="/img/product/{{product.image}}" />
+                                    <input type="button" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE" onclick="document.getElementById('fileInput').click();" />
+                                </div>
+                            </div>
+                            
+                            <div class="form-group mb-3">
+                                <label for="category" class="text-white">Category</label>
+                                <select class="custom-select tm-select-accounts m-0" id="category" name="category" required>
+                                    {{#each categories}}
+                                        <option value="{{this.name}}" {{#if (eq ../product.category this.name)}}selected{{/if}}>{{this.name}}</option>
+                                    {{/each}}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="alert alert-danger pl-3" style="display: none;">
+                            Vui lòng nhập đầy đủ thông tin
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary btn-block text-uppercase">Edit Product Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const form = document.getElementsByTagName('form')[0]
+    const alert = document.getElementsByClassName('alert')[0]
+    const file = document.getElementById('fileInput');
+    const preview = document.getElementById('preview');
+    const productImagePreview = document.getElementById('productImagePreview')
+
+    form.addEventListener('submit', function(e){
+        e.preventDefault()
+        
+        const formData = new FormData(form)
+        submitFormData(formData)
+    })
+
+
+    file.addEventListener('change',  function(e) {
+        const file = event.target.files[0];
+        if(file){
+            const img = document.createElement('img');
+            img.src = URL.createObjectURL(file);
+            img.style.maxWidth = '100%';
+            img.style.maxHeight = '100%';
+            productImagePreview.style.display = 'none'
+            // Clear any previous content and add the new image
+            preview.innerHTML = '';
+            preview.appendChild(img);
+        }else{
+            preview.innerHTML = '<p>No image selected</p>';
+        }
+    })
+
+
+    // fetch api
+    async function submitFormData(data){
+        const pathSegments = window.location.pathname.split('/'); 
+        const productId = pathSegments[pathSegments.length - 1];
+        try{
+            const response = await fetch(`http://localhost:3000/product/edit/${productId}`, {
+                method: 'PUT',
+                body: data,
+                credentials: 'include',
+            })
+            if(response.ok){
+                const result = await response.json()
+                localStorage.setItem('toastMsg', result.msg)
+                window.location.href = 'http://localhost:8080/product';
+            }else{
+                const errorMessage = await response.text();
+                alert.textContent = errorMessage || 'Có lỗi xảy ra';
+                alert.style.display = 'block';
+            }   
+        }catch(error){
+            console.error("Fetch error: ", error);
+            alert.textContent = errorMessage || 'Có lỗi xảy ra';
+            alert.style.display = 'block';
+        }
+    }
+
+</script>
+
+
